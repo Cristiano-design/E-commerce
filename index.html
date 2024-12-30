@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PromoJá</title>
+    <title>PromoNET</title>
     
     <!-- Link para o CSS do Bootstrap -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -13,97 +13,65 @@
     
     <!-- Link para o CSS Personalizado -->
     <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"><!--Normalize -->
+
+    <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <![endif]-->
 
 </head>
 <body>
-    <nav>
-        <!-- Linha principal (contém o logo, pesquisa, alerta e login) -->
-        <div class="primary-row">
-            <!-- Logo da página -->
-            <a href="#" class="navbar-brand text-white" id="promoja">PromoJá</a>
 
-            <!-- Campo de pesquisa -->
-            <div class="search-container">
-                <div class="input-group">
-                    <button class="btn btn-outline-dark custom-btn">
-                        <i class="fas fa-filter"></i>
-                    </button>
-                    <input type="text" class="form-control" placeholder="Digite sua busca...">
-                    <button class="btn btn-outline-dark custom-btn">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-            </div>
+        <div id="container"><!--início container-->
 
-            <!-- Links para alertas e login -->
-            <div class="alert-login">
-                <a href="#" class="text-white"><i class="fas fa-bell mr-2"></i> Alertas</a>
-                <a href="#" class="text-white"><i class="fas fa-user mr-2"></i> Entrar</a>
-            </div>
-        </div>
+            <header> <!--Header início -->
 
-        <!-- Linha secundária (contém os menus e links extras) -->
-        <div class="secondary-row">
-            <!-- Link para informar o CEP -->
-            <div>
-                <a href="#" class="text-white"><i class="fas fa-map-marker-alt"></i> Informe seu CEP</a>
-            </div>
+                <div id="logo"> <!--Logo início -->
+                    
+                    <h1>
+                        <a href="">PromNET</a>
+                    </h1>
+                </div> <!--Final - Logo -->
 
-            <!-- Dropdown de Categorias -->
-            <div class="dropdown" id="categoria">
+
+                <nav><!--Início Navegação -->
+
+                    <div class="search-box">
+                        <input type="text" class="seach-txt" placeholder="Pesquisar">
+                        <a href="#" class="search-btn">
+                            <img class="lupa" src="./imagens/loupe.png" alt="Lupa" height="20" width="20">
+                        </a>
+                    </div>
+
+                    <!-- Dropdown de Categorias -->
+            <div class="dropdown">
                 <button class="btn btn-link text-white dropdown-toggle" id="dropdownCategorias" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-bars"></i> Categorias
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownCategorias">
-                    <!-- Sub-menu dentro do Dropdown -->
-        <div class="dropdown-submenu">
-            <a href="#" class="dropdown-item dropdown-toggle">Serviço 3 (Sub-menu)</a>
-            <div class="dropdown-menu">
-                <a href="#" class="dropdown-item">Sub-item 1</a>
-                <a href="#" class="dropdown-item">Sub-item 2</a>
-                <a href="#" class="dropdown-item">Sub-item 3</a>
-            </div>
-        </div>
+                    
+                    <a href="#" class="dropdown-item">Serviço 2</a>
+                    <a href="#" class="dropdown-item">Serviço 2</a>
+                    <a href="#" class="dropdown-item">Serviço 2</a>
+                    <a href="#" class="dropdown-item">Serviço 2</a>
                     <a href="#" class="dropdown-item">Serviço 2</a>
                     <a href="#" class="dropdown-item">Serviço 3</a>
                 </div>
-            </div>
+            </div><!-- Fim do dropdown-1 -->
+                    
+                </nav>
 
-            <!-- Dropdown de Cashback -->
-            <div class="dropdown">
-                <button class="btn btn-link text-white dropdown-toggle" id="dropdownCashback" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-wallet"></i> Cashback
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownCashback">
-                    <a href="#" class="dropdown-item">Programa 1</a>
-                    <a href="#" class="dropdown-item">Programa 2</a>
-                    <a href="#" class="dropdown-item">Programa 3</a>
-                </div>
-            </div>
 
-            <!-- Dropdown de Dicas do PromoJá -->
-            <div class="dropdown">
-                <button class="btn btn-link text-white dropdown-toggle" id="dropdownDicas" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-lightbulb"></i> Dicas do PromoJá
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownDicas">
-                    <a href="#" class="dropdown-item">Dica 1</a>
-                    <a href="#" class="dropdown-item">Dica 2</a>
-                    <a href="#" class="dropdown-item">Dica 3</a>
-                </div>
-            </div>
+
+
+            </header>
             
-            <!-- Link de Cupons -->
-            <a href="#" class="text-white d-flex align-items-center">
-                <i class="fas fa-gift mr-2"></i> Cupons
-            </a>
-
-            <!-- Link de Oferta do Dia -->
-            <a href="#" class="text-white d-flex align-items-center">
-                <i class="fas fa-bolt mr-2"></i> Oferta do Dia
-            </a>
         </div>
-    </nav>
+    
+
+
+
+
 
     <!-- Scripts do Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> <!-- Substituir o slim pela versão completa -->

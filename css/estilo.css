@@ -1,218 +1,103 @@
-/* Normaliza o comportamento do layout */
-* {
-    margin: 0; /* Remove a margem padrão */
-    padding: 0; /* Remove o padding padrão */
-    box-sizing: border-box; /* Inclui a borda no cálculo do tamanho do elemento */
+/*Estrutura do site ******************/
+
+body{
+	margin: 0;
+	height: 100vh;
+	width: 100vw;
+	background: linear-gradient(#000000, #7fffd4, #38af6c);
+	font: 12px "Lucida Grande","Lucida Sans Unicode",Arial, sans-serif ;
 }
 
-/* Definindo fontes e cores principais */
-body {
-    font-family: "Trebuchet MS", Helvetica, sans-serif; /* Define a fonte padrão do site */
-    background-color: #f4f4f4; /* Define a cor de fundo */
-    color: #333; /* Define a cor do texto */
+#container{
+	width: 1090px;
+	margin: 0 auto;
 }
 
-nav {
-    background-color: #333; /* Cor de fundo do menu de navegação */
-    color: white; /* Cor do texto dentro da barra de navegação */
-}
-
-/* Linha principal de navegação */
-.primary-row {
-    display: flex; /* Alinha os itens horizontalmente */
-    justify-content: space-between; /* Espaçamento entre os itens */
-    align-items: center; /* Alinha os itens verticalmente */
-    padding: 10px 20px; /* Espaçamento interno */
-    gap: 20px; /* Espaço fixo entre os itens */
-}
-
-/* Estilo do logo */
-#promoja {
-    font-size: 24px; /* Tamanho da fonte do logo */
-    color: white; /* Cor do logo */
-    text-decoration: none !important; /* Remove o sublinhado do logo */
-    font-weight: bold; /* Deixa o logo em negrito */
-}
-
-/* Caixa de busca */
-.search-container {
-    flex-grow: 1; /* Faz a busca ocupar o restante do espaço disponível */
-    display: flex;
-    justify-content: center;
-}
-
-.input-group {
-    display: flex; /* Exibe os itens dentro da busca em linha */
-    width: auto; /* Ajusta a largura da busca */
-    max-width: 500px; /* Define largura máxima da busca */
-    position: relative;
-}
-
-/* Estilo do campo de busca */
-input[type="text"] {
-    width: 100%; /* Preenche todo o espaço disponível */
-    padding: 10px 15px; /* Aumenta o padding para uma altura maior */
-    border: 1px solid #ccc; /* Define a borda do campo */
-    border-radius: 25px 0 0 25px; /* Arredonda os cantos esquerdo do campo de busca */
-    font-size: 16px; /* Tamanho da fonte dentro da busca */
-    height: 45px; /* Altura do campo de busca */
-    max-width: 400px; /* Largura máxima do campo de busca */
-}
-
-/* Estilo para o botão filtro e lupa */
-.custom-btn {
-    background-color: white; /* Cor de fundo do botão */
-    border: 2px solid white; /* Borda branca ao redor do botão */
-    color: black; /* Cor do ícone preta */
-    padding: 0; /* Remove padding extra */
-    width: 45px; /* Define a largura fixa para o botão */
-    height: 45px; /* Define a altura do botão */
-    border-radius: 0; /* Remove arredondamento, deixando o botão quadrado */
-    display: flex; /* Usa flexbox para centralizar o ícone dentro do botão */
-    justify-content: center;
-    align-items: center;
-}
-
-.custom-btn:hover {
-    background-color: #1bbc9b; /* Altera a cor de fundo quando passa o mouse */
-    color: white; /* Altera a cor do ícone quando passa o mouse */
-    text-decoration: none !important;
-}
-
-.custom-btn i {
-    font-size: 20px; /* Define o tamanho do ícone */
-    color: black; /* Cor do ícone preta */
-}
-
-/* Alerta e links de login */
-.alert-login a {
-    color: white; /* Cor do texto do link */
-    margin-left: 20px; /* Espaço à esquerda do link */
-    text-decoration: none !important; /* Remove o sublinhado do link */
-    transition: color 0.3s ease; /* Transição suave de cor */
-}
-
-.alert-login a:hover {
-    color: #1bbc9b; /* Cor do texto quando o link é clicado */
-    text-decoration: none !important;
-}
-
-/* Linha secundária de navegação */
-.secondary-row {
-    display: flex; /* Exibe os itens dentro da linha em linha */
-    justify-content: space-between; /* Espaçamento entre os itens */
-    padding: 10px 20px; /* Espaçamento interno */
-    gap: 20px; /* Espaço fixo entre os itens */
-}
-
-/* Links de categorias, cashback e dicas */
-a {
-    color: #1bbc9b; /* Cor do texto */
-    text-decoration: none !important; /* Remover sublinhado, com maior prioridade */
-    padding: 8px 12px; /* Espaçamento do link */
-    display: inline-block; /* Exibe o link em linha */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+a:link, a:active, a:visited {
+	color: ;
+	text-decoration: none;
 }
 
 a:hover {
-    background-color: #1bbc9b; /* Cor do fundo ao passar o mouse */
-    color: white; /* Cor do texto ao passar o mouse */
-    text-decoration: none !important; /* Garante que o sublinhado não apareça no hover */
-}
-
-/* Dropdown */
-.dropdown {
-    position: relative;
-}
-
-.dropdown-toggle {
-    background-color: transparent;
-    border: none;
-    color: white;
-    padding: 8px 12px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.dropdown-toggle:hover {
-    background-color: #1bbc9b;
-    color: white;
-    text-decoration: none !important;
-}
-
-/* Remove as setinhas ao lado do menu dropdown */
-.dropdown-toggle::after {
-    display: none !important;
+	color: ;
 }
 
 
-.dropdown-menu {
-    display: none; /* Oculta o menu inicialmente */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    min-width: 200px;
-    padding: 5px 0;
-    border-radius: 4px;
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0s 0.3s;
+
+/***** LOGO DO SITE ****************/
+
+#logo h1 {
+	float: left;
 }
 
-.dropdown:hover > .dropdown-menu {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.3s ease, visibility 0s 0s;
-    text-decoration: none !important;
+#logo a {
+	width: 250px;
+	height: 145px;
+	margin-top: -35px;
+	text-indent: -9999px;
+	display: block;
+	background: url(../imagens/logo.png) no-repeat;
 }
 
-.dropdown-item {
-    color: #1bbc9b;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+/*****CAIXA DE BUSCA E BOTÃO ****/
+
+.search-box{
+	position: absolute;
+	top: 70px;
+	left: 50%;
+	background: #2f4f4f;
+	height: 56px;
+	padding: 10px;
+	border-radius: 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
 }
 
-.dropdown-item:hover {
-    background-color: #1bbc9b;
-    color: white;
+/******** Barra de texto ********/
+.seach-txt{
+	border: none;
+	background: none;
+	outline: none;
+	padding: 0;
+	color: #f0f5fb;
+	font-size: 16px;
+	line-height: 40px;
+	width: 0;
+	transition: 0.5s;
+
 }
 
-/* Submenu */
-.dropdown-submenu {
-    position: relative;
+/***** Botão da box ****/
+
+.search-btn {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #8fbc8f;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.7s;
 }
 
-.dropdown-submenu > .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    background-color: #333;
-    min-width: 200px;
-    padding: 5px 0;
-    border-radius: 4px;
-    z-index: 1001;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0s 0.3s;
+.search-box:hover > .seach-txt {
+	width: 240px;
+	padding: 0 6px;
 }
 
-.dropdown-submenu:hover > .dropdown-menu {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.3s ease, visibility 0s 0s;
+.search-box:hover > .search-btn {
+	background: #f0f5fb;
 }
 
-.dropdown-submenu > .dropdown-item {
-    color: #1bbc9b;
+:: -webkit-input-placeholder {
+	color: #1e3754;
 }
 
-.dropdown-submenu > .dropdown-item:hover {
-    background-color: #1bbc9b;
-    color: white;
-}
+/*****Fontes importadas ******/ 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap%27%29%3B')
+
+
+/********* Dropdown ****/
+
