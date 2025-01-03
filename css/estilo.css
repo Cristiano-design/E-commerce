@@ -1,54 +1,19 @@
 /*Estrutura do site ******************/
 
 body{
-	margin: 0;
-	height: 100vh;
-	width: 100vw;
-	background: linear-gradient(#000000, #7fffd4, #38af6c);
 	font: 12px "Lucida Grande","Lucida Sans Unicode",Arial, sans-serif ;
-}
-
-#container{
-	width: 1090px;
-	margin: 0 auto;
-}
-
-a:link, a:active, a:visited {
-	color: ;
-	text-decoration: none;
-}
-
-a:hover {
-	color: ;
-}
-
-
-
-/***** LOGO DO SITE ****************/
-
-#logo h1 {
-	float: left;
-}
-
-#logo a {
-	width: 250px;
-	height: 145px;
-	margin-top: -35px;
-	text-indent: -9999px;
-	display: block;
-	background: url(../imagens/logo.png) no-repeat;
 }
 
 /*****CAIXA DE BUSCA E BOTÃO ****/
 
 .search-box{
 	position: absolute;
-	top: 70px;
-	left: 50%;
-	background: #2f4f4f;
-	height: 56px;
-	padding: 10px;
-	border-radius: 40px;
+	top: 48px;
+	left: 66%;
+	background: darkgray;
+	height: 40px;
+	padding: 5px;
+	border-radius: 60px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -61,7 +26,7 @@ a:hover {
 	background: none;
 	outline: none;
 	padding: 0;
-	color: #f0f5fb;
+	color: #FFF;
 	font-size: 16px;
 	line-height: 40px;
 	width: 0;
@@ -72,10 +37,10 @@ a:hover {
 /***** Botão da box ****/
 
 .search-btn {
-	width: 40px;
-	height: 40px;
+	width: 34px;
+	height: 34px;
 	border-radius: 50%;
-	background: #8fbc8f;
+	background: #4682B4;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -95,9 +60,127 @@ a:hover {
 	color: #1e3754;
 }
 
-/*****Fontes importadas ******/ 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap%27%29%3B')
 
+/********* Nav ***********/
+.nav-item {
+    margin-right: 15px; /* Ajuste o valor conforme necessário */
+}
+
+/***********LOGO*************/
+#logo{
+	padding-top: 10px;
+}
+
+
+/******************* Espaço-li *************/
+
+#espaco-li-4{
+	left: 45%;
+}
+
+nav li{
+	bottom: 4px;
+}
 
 /********* Dropdown ****/
 
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+/* Cor e modelo do dropdown Pai*/
+.dropdown-toggle:hover {
+    background-color: #4682B4;
+    color: white;
+    text-decoration: none !important;
+}
+
+/* Remove as setinhas ao lado do menu dropdown */
+.dropdown-toggle::after {
+    display: none;
+}
+
+/* Box do dropdown e filhos */
+.dropdown-menu {
+    display: none; /* Oculta o menu inicialmente */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    min-width: 200px;
+    padding: 5px 0;
+    border-radius: 5px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0s 0.5s;
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0s 0s;
+    text-decoration: none !important;
+}
+
+/*Cor dos nomes e comportamento dos itens filhos*/
+.dropdown-item {
+    color: #5F9EA0;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #5F9EA0;
+    color: white;
+}
+
+/* Submenu */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #333;
+    min-width: 200px;
+    padding: 5px 0;
+    border-radius: 4px;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0s 0.5s;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0s 0s;
+}
+
+.dropdown-submenu > .dropdown-item {
+    color: #1bbc9b;
+}
+
+.dropdown-submenu > .dropdown-item:hover {
+    background-color: #1bbc9b;
+    color: white;
+}
+
+/* Não foi implementado melhorias nos submenus ainda */ /*Warning*/ /*-----------------------------*/
