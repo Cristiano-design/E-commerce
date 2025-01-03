@@ -26,47 +26,115 @@
 
             <header> <!--Header início -->
 
-                <div id="logo"> <!--Logo início -->
-                    
-                    <h1>
-                        <a href="">PromNET</a>
-                    </h1>
-                </div> <!--Final - Logo -->
+               <nav class="nav navbar-expand-lg navbar-light bg-dark mt-0"> <!--Nav Início -->
+
+    <a class="navbar-brand" href="#"><!-- Logo -->
+        <img src="./imagens/logo1.png" alt="logo" style="height: 130px; width: auto;" id="logo">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
+        <span class="navbar-toggler-icon"></span>
+    </button><!-- Fim Logo/Botão -->
+
+    <div class="collapse navbar-collapse" id="navbarSite"> <!-- Menu -->
+        <ul class="navbar-nav">
+            <!-- Menu 1: Tecnologia -->
+            <li class="nav-item dropdown mr-4">
+                <button class="btn btn-link text-white dropdown-toggle" id="dropdownCategorias1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-microchip"></i> Tecnologia
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownCategorias1">
+                    <a class="dropdown-item" href="#">Computadores</a>
+                    <a class="dropdown-item" href="#">Notebooks</a>
+                    <a class="dropdown-item" href="#">Consoles</a>
+                    <a class="dropdown-item" href="#">Tablets</a>
+                    <a class="dropdown-item" href="#">Controles</a>
+                    <a class="dropdown-item" href="#">Smartphones</a>
+                    <a class="dropdown-item" href="#">Teclados</a>
+                    <a class="dropdown-item" href="#">Mouse</a>
+                    <a class="dropdown-item" href="#">Microfones</a>
+                    <a class="dropdown-item" href="#">Webcam</a>
+                    <a class="dropdown-item" href="#">Suportes</a>
+                    <a class="dropdown-item" href="#">Outros</a>
+                </div>
+            </li> <!-- Menu 1: Tecnologia -->
+
+            <!-- Menu 2: Escritório -->
+            <li class="nav-item dropdown mr-4">
+                <button class="btn btn-link text-white dropdown-toggle" id="dropdownCategorias2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-paperclip"></i> Escritório
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownCategorias2">
+                    <a class="dropdown-item" href="#">Cadeira</a>
+                    <a class="dropdown-item" href="#">Mesas</a>
+                    <a class="dropdown-item" href="#">Papelaria</a>
+                    <a class="dropdown-item" href="#">Calculadoras</a>
+                    <a class="dropdown-item" href="#">Fragmentadoras</a>
+                    <a class="dropdown-item" href="#">Impressoras</a>
+                    <a class="dropdown-item" href="#">Acessórios</a>
+                </div>
+            </li> <!-- Menu 2: Escritório -->
+
+            <!-- Menu 3: Casa -->
+            <li class="nav-item dropdown mr-4">
+                <button class="btn btn-link text-white dropdown-toggle" id="dropdownCategorias2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-paint-roller"></i> Para Casa
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownCategorias2">
+                    <a class="dropdown-item" href="#">Cozinha</a>
+                    <a class="dropdown-item" href="#">Banheiro</a>
+                    <a class="dropdown-item" href="#">Quarto</a>
+                    <a class="dropdown-item" href="#">Sala</a>
+                    <a class="dropdown-item" href="#">Jardim</a>
+                    <a class="dropdown-item" href="#">Iluminação</a>
+                </div>
+            </li> <!-- Menu 3: Final Casa -->
+
+            <!-- Menu 4: Pets -->
+            <li class="nav-item dropdown mr-4">
+                <button class="btn btn-link text-white dropdown-toggle" id="dropdownCategorias2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-fish"></i> Pets
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownCategorias2">
+                    <a class="dropdown-item" href="#">Para Casa</a>
+                    <a class="dropdown-item" href="#">Tecnologia</a>
+                    <a class="dropdown-item" href="#">Escritório</a>
+                    <a class="dropdown-item" href="#">Pets</a>
+                </div>
+            </li> <!-- Menu 4: Final Pets -->
+
+            <!-- Menu 5: Ofertas do dia -->
+            <li class="nav-item dropdown mr-4">
+                <button class="btn btn-link text-white dropdown-toggle" id="dropdownCategorias2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bolt"></i> Ofertas do dia
+                </button><!--Revisão para adicionar links ou alguma coisa -->
+            </li> <!-- Menu 5: Final Ofertas do dia -->
 
 
-                <nav><!--Início Navegação -->
-
-                    <div class="search-box">
+                <!-- Seach-box --->
+                <div class="search-box">
                         <input type="text" class="seach-txt" placeholder="Pesquisar">
                         <a href="#" class="search-btn">
                             <img class="lupa" src="./imagens/loupe.png" alt="Lupa" height="20" width="20">
                         </a>
                     </div>
+                    <!--Fim Search-box -->
 
-                    <!-- Dropdown de Categorias -->
-            <div class="dropdown">
-                <button class="btn btn-link text-white dropdown-toggle" id="dropdownCategorias" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-bars"></i> Categorias
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownCategorias">
-                    
-                    <a href="#" class="dropdown-item">Serviço 2</a>
-                    <a href="#" class="dropdown-item">Serviço 2</a>
-                    <a href="#" class="dropdown-item">Serviço 2</a>
-                    <a href="#" class="dropdown-item">Serviço 2</a>
-                    <a href="#" class="dropdown-item">Serviço 2</a>
-                    <a href="#" class="dropdown-item">Serviço 3</a>
-                </div>
-            </div><!-- Fim do dropdown-1 -->
-                    
-                </nav>
-
+                    <!-- Menu 6: Todos -->
+            <li class="nav-item dropdown ml-4" id="espaco-li-4">
+                <button class="btn btn-link text-white dropdown-toggle" id="dropdownCategorias2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-bars"></i> Todos
+                </button> <!-- Menu 6: Final Todos -->
+                
+        </ul>
+    </div>
+</nav>
 
 
 
             </header>
             
-        </div>
+        </div> <!-- Final Menu -->
     
 
 
@@ -77,5 +145,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> <!-- Substituir o slim pela versão completa -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
 </body>
 </html>
