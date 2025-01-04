@@ -183,4 +183,113 @@ nav li{
     color: white;
 }
 
-/* Não foi implementado melhorias nos submenus ainda */ /*Warning*/ /*-----------------------------*/
+/* Menu Lateral */
+#side-menu {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Escondido fora da tela à direita */
+    width: 300px;
+    height: 100%;
+    background-color: #3f3f3f; /* Cinza */
+    color: #111;
+    overflow-y: auto;
+    transition: right 0.3s ease; /* Animação suave */
+    z-index: 1050; /* Sobrepõe outros elementos */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Sombra do lado esquerdo */
+}
+
+/* Quando o menu está aberto */
+#side-menu.open {
+    right: 0; /* Desliza o menu para dentro da tela */
+}
+
+/* Botão de fechar */
+#close-menu-btn {
+    position: absolute;
+    top: -6px;
+    left: 80%; /* Colocado à esquerda dentro do menu */
+    background: none;
+    border: none;
+    font-size: 2.5em;
+    color: #FFF;
+    cursor: pointer;
+}
+
+
+/* Topo do menu lateral */
+#hmenu-customer-profile {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #2F4F4F; /* Fundo Azul*/
+    border-bottom: 1px solid #ddd; /* Linha separadora */
+}
+
+#hmenu-customer-profile-right {
+    flex: 1;
+    text-align: left;
+}
+
+/* Texto do menu top */
+#hmenu-customer-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFF; /* Cor do texto */
+    margin: 0;
+}
+
+/* Lista de categorias */
+#side-menu ul {
+    list-style: none;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+#side-menu ul li {
+    margin: 10px 0;
+}
+
+#side-menu ul li a {
+    color: #4682B4; /* Azul escuro como o da Amazon */
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+#side-menu ul li a:hover {
+    color: #4682B4; /* Alaranjado da Amazon ao passar o mouse */
+}
+
+/* Separadores entre seções */
+#side-menu .divider {
+    height: 1px;
+    background-color: #ddd;
+    margin: 15px 0;
+}
+
+/* Menus laterais */
+
+
+/* Dropdown */
+
+
+.dropdown-toggle {
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+/* Cor e modelo do dropdown Pai*/
+.dropdown-toggle:hover {
+    background-color: #4682B4;
+    color: white;
+    text-decoration: none !important;
+}
+
+/* Remove as setinhas ao lado do menu dropdown */
+.dropdown-toggle::after {
+    display: none;
+}
