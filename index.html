@@ -120,11 +120,156 @@
                     </div>
                     <!--Fim Search-box -->
 
-                    <!-- Menu 6: Todos -->
-            <li class="nav-item dropdown ml-4" id="espaco-li-4">
-                <button class="btn btn-link text-white dropdown-toggle" id="dropdownCategorias2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-bars"></i> Todos
-                </button> <!-- Menu 6: Final Todos -->
+
+                  <!-- Menu 6: Todos -->
+                            <li class="nav-item dropdown ml-4" id="espaco-li-4">
+                    <button id="open-menu-btn" class="btn btn-link text-white">
+                        <i class="fas fa-bars"></i> Todos
+                    </button>
+                </li>
+
+                <!-- Menu Lateral -->
+                <div id="side-menu">
+                    <button id="close-menu-btn" class="btn btn-light">×</button>
+                    <div id="hmenu-customer-profile">
+                  <div id="hmenu-customer-profile-right">
+                    <div id="hmenu-customer-name">
+                      <b>Todos os Produtos</b>
+                    </div>
+                  </div>
+                </div>
+
+                <ul class="nav flex-column">
+    <!-- Seção: Destaques -->
+    <li class="nav-item">
+        <div class="nav-link active" role="heading" aria-level="6">Destaques</div>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">Mais Vendidos</a>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">Novidades na Amazon</a>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">Produtos em alta</a>
+    </li>
+    <li class="nav-item my-2">
+        <hr>
+    </li>
+
+    <!-- Seção: Conteúdo digital e dispositivos -->
+    <li class="nav-item">
+        <div class="nav-link active" role="heading" aria-level="6">Conteúdo digital e dispositivos</div>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">
+            <div>Amazon Fire TV</div>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">
+            <div>Amazon Music</div>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">
+            <div>Prime Video</div>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">
+            <div>Aplicativos Amazon</div>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">
+            <div>Dispositivos Kindle e eBooks</div>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">
+            <div>Echo e Alexa</div>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">
+            <div>Audiolivros Audible</div>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+    </li>
+    <li class="nav-item my-2">
+        <hr>
+    </li>
+
+    <!-- Seção: Comprar por categoria -->
+    <li class="nav-item">
+        <div class="nav-link active" role="heading" aria-level="6">Comprar por categoria</div>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">
+            <div>Alimentos e Bebidas</div>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">
+            <div>Automotivo</div>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">
+            <div>Bebês</div>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">
+            <div>Beleza e Cuidados Pessoais</div>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+    </li>
+    <li class="nav-item my-2">
+        <hr>
+    </li>
+
+    <!-- Seção: PROGRAMAS E RECURSOS -->
+    <li class="nav-item">
+        <div class="nav-link active" role="heading" aria-level="6">PROGRAMAS E RECURSOS</div>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">Amazon Prime</a>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">Achados Internacionais</a>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">Dicas de Presentes</a>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">Lista do Bebê</a>
+    </li>
+    <li class="nav-item my-2">
+        <hr>
+    </li>
+
+    <!-- Seção: AJUDA E CONFIGURAÇÕES -->
+    <li class="nav-item">
+        <div class="nav-link active" role="heading" aria-level="6">AJUDA</div>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">Ajuda</a>
+    </li>
+</ul>
+
+
+
                 
         </ul>
     </div>
@@ -142,9 +287,11 @@
 
 
     <!-- Scripts do Bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> <!-- Substituir o slim pela versão completa -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/configuracao.js"></script>
+
 
     
 </body>
