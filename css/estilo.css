@@ -1,63 +1,58 @@
-/*Estrutura do site ******************/
-
-body{
-	font: 12px "Lucida Grande","Lucida Sans Unicode",Arial, sans-serif ;
+/* Estrutura do site ******************/
+body {
+    font: 12px "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
 }
 
-/*****CAIXA DE BUSCA E BOTÃO ****/
-
-.search-box{
-	position: absolute;
-	top: 48px;
-	left: 66%;
-	background: darkgray;
-	height: 40px;
-	padding: 5px;
-	border-radius: 60px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-
+/***** CAIXA DE BUSCA E BOTÃO ****/
+.search-box {
+    position: absolute;
+    top: 48px;
+    left: 66%;
+    background: darkgray;
+    height: 40px;
+    padding: 5px;
+    border-radius: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /******** Barra de texto ********/
-.seach-txt{
-	border: none;
-	background: none;
-	outline: none;
-	padding: 0;
-	color: #FFF;
-	font-size: 16px;
-	line-height: 40px;
-	width: 0;
-	transition: 0.5s;
-
+.seach-txt {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: #FFF;
+    font-size: 16px;
+    line-height: 40px;
+    width: 0;
+    transition: 0.5s;
 }
 
 /***** Botão da box ****/
-
 .search-btn {
-	width: 34px;
-	height: 34px;
-	border-radius: 50%;
-	background: #4682B4;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	transition: 0.7s;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #4682B4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.7s;
 }
 
 .search-box:hover > .seach-txt {
-	width: 240px;
-	padding: 0 6px;
+    width: 240px;
+    padding: 0 6px;
 }
 
 .search-box:hover > .search-btn {
-	background: #f0f5fb;
+    background: #f0f5fb;
 }
 
 :: -webkit-input-placeholder {
-	color: #1e3754;
+    color: #1e3754;
 }
 
 
@@ -67,23 +62,20 @@ body{
 }
 
 /***********LOGO*************/
-#logo{
-	padding-top: 10px;
+#logo {
+    padding-top: 10px;
 }
-
 
 /******************* Espaço-li *************/
-
-#espaco-li-4{
-	left: 45%;
+#espaco-li-4 {
+    left: 45%;
 }
 
-nav li{
-	bottom: 4px;
+nav li {
+    bottom: 4px;
 }
 
 /********* Dropdown ****/
-
 /* Dropdown */
 .dropdown {
     position: relative;
@@ -134,7 +126,7 @@ nav li{
     text-decoration: none !important;
 }
 
-/*Cor dos nomes e comportamento dos itens filhos*/
+/* Cor dos nomes e comportamento dos itens filhos */
 .dropdown-item {
     color: #5F9EA0;
     padding: 10px 20px;
@@ -215,13 +207,12 @@ nav li{
     cursor: pointer;
 }
 
-
 /* Topo do menu lateral */
 #hmenu-customer-profile {
     display: flex;
     align-items: center;
     padding: 15px 20px;
-    background-color: #2F4F4F; /* Fundo Azul*/
+    background-color: #2F4F4F; /* Fundo Azul */
     border-bottom: 1px solid #ddd; /* Linha separadora */
 }
 
@@ -267,29 +258,93 @@ nav li{
     margin: 15px 0;
 }
 
-/* Menus laterais */
+/* Responsividade - Media Queries */
 
+/* Para celulares */
+@media (max-width: 767px) {
+    .search-box {
+        top: 10px;
+        left: 10px;
+        width: 90%;
+        height: 35px;
+    }
 
-/* Dropdown */
+    .seach-txt {
+        font-size: 14px;
+    }
 
+    .search-btn {
+        width: 30px;
+        height: 30px;
+    }
 
-.dropdown-toggle {
-    background-color: transparent;
-    border: none;
-    color: white;
-    padding: 8px 12px;
-    cursor: pointer;
-    transition: background-color 0.5s ease;
+    #side-menu {
+        right: -300px;
+        width: 250px;
+    }
+
+    #side-menu.open {
+        right: 0;
+    }
 }
 
-/* Cor e modelo do dropdown Pai*/
-.dropdown-toggle:hover {
-    background-color: #4682B4;
-    color: white;
-    text-decoration: none !important;
+/* Para tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .search-box {
+        top: 10px;
+        left: 10%;
+        width: 80%;
+        height: 40px;
+    }
+
+    .seach-txt {
+        font-size: 16px;
+    }
+
+    #side-menu {
+        right: -300px;
+        width: 280px;
+    }
+
+    #side-menu.open {
+        right: 0;
+    }
 }
 
-/* Remove as setinhas ao lado do menu dropdown */
-.dropdown-toggle::after {
-    display: none;
+/* Para telas de desktop */
+@media (min-width: 1025px) {
+    .search-box {
+        top: 48px;
+        left: 66%;
+        width: auto;
+    }
+
+    .seach-txt {
+        font-size: 16px;
+    }
+
+    #side-menu {
+        right: -300px;
+        width: 300px;
+    }
+
+    #side-menu.open {
+        right: 0;
+    }
+}
+
+/* Para TVs */
+@media (min-width: 1920px) {
+    .search-box {
+        top: 50px;
+        left: 70%;
+    }
+
+    .seach-txt {
+        font-size: 18px;
+    }
+
+    #side-menu {
+        width: 350px;
+    }
 }
