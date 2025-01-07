@@ -11,3 +11,5 @@ openMenuBtn.addEventListener('click', () => {
 closeMenuBtn.addEventListener('click', () => {
     sideMenu.classList.remove('open');
 });
+
+
