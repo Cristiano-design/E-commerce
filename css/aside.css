@@ -1,0 +1,110 @@
+/* Layout Principal */
+.store-section {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Barra Lateral de Lojas */
+.store-aside {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+}
+
+.store-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+.store-card {
+    display: inline-block;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    text-align: center; 
+}
+
+.store-card img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.store-card:hover {
+    transform: scale(1.1);
+}
+
+/* Botões de Navegação */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-btn {
+    left: 0;
+}
+
+.right-btn {
+    right: 0;
+}
+
+/* Seção Principal */
+.store-display {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .store-section {
+        flex-direction: column; 
+    }
+
+    .store-aside {
+        width: 100%;
+    }
+
+    .store-display {
+        width: 100%;
+    }
+
+    .store-card {
+        width: 80px;
+    }
+}
+
+.store-list button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}

@@ -1,0 +1,391 @@
+/* Estrutura do site ******************/
+
+body {
+    font: 12px "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+}
+
+/***** CAIXA DE BUSCA E BOTÃO ****/
+.search-box {
+    position: absolute;
+    top: 51px;
+    left: 67%;
+    background: darkgray;
+    height: 40px;
+    padding: 5px;
+    border-radius: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+/******** Barra de texto ********/
+.seach-txt {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: #FFF;
+    font-size: 16px;
+    line-height: 40px;
+    width: 0;
+    transition: 0.5s;
+}
+
+/***** Botão da box ****/
+.search-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #4682B4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.7s;
+}
+
+/***** Hover (desktop e mobile) ****/
+.search-box:hover > .seach-txt {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.search-box:hover > .search-btn {
+    background: #f0f5fb;
+}
+
+/***** Responsividade para dispositivos menores ****/
+@media (max-width: 768px) {
+    .search-box {
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        height: 34px;
+    }
+
+    .seach-txt {
+        font-size: 14px; 
+        line-height: 34px;
+    }
+
+    .search-box:hover > .seach-txt {
+        width: 180px;
+    }
+
+    .search-btn {
+        width: 30px; 
+        height: 30px;
+    }
+}
+
+
+/********* Nav ***********/
+.nav-item {
+    margin-right: 15px;
+    text-decoration: none;
+    
+}
+
+/***********LOGO*************/
+#logo {
+    padding-top: 10px;
+}
+
+/******************* Espaço-li *************/
+#espaco-li-4 {
+    left: -1%;
+}
+
+nav li {
+    bottom: 4px;
+    text-decoration: none !important;
+}
+
+.navbar .btn-link {
+    text-decoration: none !important;
+}
+
+
+/********* Dropdown ****/
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+/* Cor e modelo do dropdown Pai*/
+.dropdown-toggle:hover {
+    background-color: #4682B4;
+    color: white;
+    text-decoration: none !important;
+}
+
+/* Remove as setinhas ao lado do menu dropdown */
+.dropdown-toggle::after {
+    display: none;
+}
+
+/* Box do dropdown e filhos */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    min-width: 200px;
+    padding: 5px 0;
+    border-radius: 5px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0s 0.5s;
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0s 0s;
+    text-decoration: none !important;
+}
+
+/* Cor e comportamento dos itens filhos */
+.dropdown-item {
+    color: #5F9EA0;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #5F9EA0;
+    color: white;
+}
+
+/* Submenu */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #333;
+    min-width: 200px;
+    padding: 5px 0;
+    border-radius: 4px;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0s 0.5s;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0s 0s;
+}
+
+.dropdown-submenu > .dropdown-item {
+    color: #1bbc9b;
+}
+
+.dropdown-submenu > .dropdown-item:hover {
+    background-color: #1bbc9b;
+    color: white;
+}
+
+/* Menu Lateral */
+#side-menu {
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 300px; 
+    height: 100%;
+    background-color: #3f3f3f; 
+    color: #111;
+    overflow-y: auto; 
+    transition: transform 0.3s ease;
+    z-index: 1050; 
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); 
+    transform: translateX(-100%); 
+}
+
+/* Quando o menu está aberto */
+#side-menu.open {
+    transform: translateX(0);
+}
+
+/* Prevenir rolagem horizontal*/
+body.menu-open {
+    overflow-x: hidden;
+}
+
+/* Botão de fechar */
+#close-menu-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: #FFF;
+    cursor: pointer;
+}
+
+/* Topo do menu lateral */
+#hmenu-customer-profile {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #2F4F4F;
+    border-bottom: 1px solid #ddd;
+}
+
+#hmenu-customer-profile-right {
+    flex: 1;
+    text-align: left;
+}
+
+/* Texto do menu top */
+#hmenu-customer-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFF;
+    margin: 0;
+}
+
+/* Lista de categorias */
+#side-menu ul {
+    list-style: none;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+#side-menu ul li {
+    margin: 10px 0;
+}
+
+#side-menu ul li a {
+    color: #4682B4;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+#side-menu ul li a:hover {
+    color: #4682B4;
+}
+
+/* Separadores entre seções */
+#side-menu .divider {
+    height: 1px;
+    background-color: #ddd;
+    margin: 15px 0;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+    #side-menu {
+        width: 250px; 
+    }
+}
+
+
+
+
+/*-------------Slides -----------------*/
+
+.slider {
+    margin: 0 auto;
+    width: 400%; 
+    max-width: 1366px; 
+    height: auto; 
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 400%; 
+    height: auto; 
+    transition: transform 0.5s ease; 
+}
+
+.slides input {
+    display: none;
+}
+
+.slide img {
+    width: 400%; 
+    height: auto; 
+    display: block; 
+}
+
+.slide {
+    width: 400%;
+    position: relative;
+}
+
+/* Navegação automática*/
+.navegacao-auto {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.auto-btn1, .auto-btn2, .auto-btn3, .auto-btn4 {
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Navegação manual */
+.navegacao-manual {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #FFF;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 10px;
+}
+
+.manual-btn:hover {
+    background-color: #FFF;
+}
+
+/*carrossel para telas pequenas */
+@media (max-width: 768px) {
+    .slider img {
+        height: 200px;
+        object-fit: cover;
+    }
+}
+
