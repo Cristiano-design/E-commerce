@@ -215,15 +215,15 @@ nav li {
     width: 300px; 
     height: 100%;
     background-color: #3f3f3f; 
-    color: #111;
+    color: #FFF;
     overflow-y: auto; 
     transition: transform 0.3s ease;
     z-index: 1050; 
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); 
-    transform: translateX(-100%); 
+    transform: translateX(-100%);
+    font-size: 16px; 
 }
 
-/* Quando o menu está aberto */
 #side-menu.open {
     transform: translateX(0);
 }
@@ -250,7 +250,7 @@ body.menu-open {
     display: flex;
     align-items: center;
     padding: 15px 20px;
-    background-color: #2F4F4F;
+    background-color: #4682B4;
     border-bottom: 1px solid #ddd;
 }
 
@@ -286,7 +286,7 @@ body.menu-open {
 }
 
 #side-menu ul li a:hover {
-    color: #4682B4;
+    color: #fff;
 }
 
 /* Separadores entre seções */
